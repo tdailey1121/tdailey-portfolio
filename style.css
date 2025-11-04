@@ -1,4 +1,36 @@
+/* Navigation Styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(17, 24, 39, 0.8); /* translucent dark */
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #E4E9E3;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00f7b6;
+}
+
 /* Intro Section - Matches existing dark gradient site theme */
+.intro {
+  padding-top: 7rem; /* added to push content below navbar */
+}
+
 .intro {
   display: flex;
   align-items: center;
@@ -113,3 +145,4 @@
   from { opacity: 0; transform: translateX(40px); }
   to { opacity: 1; transform: translateX(0); }
 }
+

@@ -1,29 +1,41 @@
-/* Navigation Styling */
+/* ====== NAVIGATION ====== */
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(17, 24, 39, 0.8); /* translucent dark */
-  backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 1rem 0;
-  z-index: 1000;
+  padding: 1.2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(10, 59, 46, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 100;
 }
 
 nav a {
-  color: #E4E9E3;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  color: #FAFAF7;
   font-weight: 500;
-  transition: color 0.3s ease;
+  position: relative;
 }
 
-nav a:hover,
+nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #8A9A5B;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
 nav a.active {
-  color: #00f7b6;
+  color: #8A9A5B;
+  font-weight: 600;
 }
 
 /* Intro Section - Matches existing dark gradient site theme */
@@ -145,4 +157,5 @@ nav a.active {
   from { opacity: 0; transform: translateX(40px); }
   to { opacity: 1; transform: translateX(0); }
 }
+
 
